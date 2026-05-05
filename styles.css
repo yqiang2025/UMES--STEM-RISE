@@ -26,8 +26,8 @@
         font-family: Arial, Helvetica, sans-serif;
         color: var(--ink);
         background:
-          linear-gradient(rgba(246, 249, 252, 0.88), rgba(246, 249, 252, 0.88)),
-          url("assets/stem-rise-hero.png") center top / cover fixed no-repeat;
+          linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.42)),
+          url("assets/stem-rise-hero.png") center center / cover fixed no-repeat;
         line-height: 1.6;
       }
 
@@ -44,8 +44,8 @@
         justify-content: space-between;
         gap: 22px;
         padding: 16px clamp(18px, 4vw, 56px);
-        border-bottom: 1px solid rgba(219, 228, 239, 0.85);
-        background: rgba(255, 255, 255, 0.94);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+        background: rgba(255, 255, 255, 0.76);
         backdrop-filter: blur(12px);
       }
 
@@ -129,9 +129,8 @@
         display: grid;
         align-items: center;
         background:
-          linear-gradient(120deg, rgba(9, 35, 74, 0.94), rgba(15, 94, 168, 0.7)),
-          radial-gradient(circle at top right, rgba(245, 179, 1, 0.35), transparent 34%),
-          linear-gradient(135deg, #09234a, #0f5ea8);
+          linear-gradient(120deg, rgba(9, 35, 74, 0.76), rgba(15, 94, 168, 0.22)),
+          url("assets/stem-rise-hero.png") center center / cover no-repeat;
         color: white;
       }
 
@@ -152,7 +151,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center center;
-        opacity: 0.38;
+        opacity: 0.62;
       }
 
       .hero-content {
@@ -244,8 +243,9 @@
       }
 
       .quick-facts div {
-        background: rgba(255, 255, 255, 0.92);
+        background: rgba(255, 255, 255, 0.76);
         padding: 28px clamp(18px, 3vw, 40px);
+        backdrop-filter: blur(8px);
       }
 
       .quick-facts strong,
@@ -315,7 +315,7 @@
       .admin-panel {
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        background: var(--card);
+        background: rgba(255, 255, 255, 0.84);
         box-shadow: 0 12px 36px rgba(15, 35, 70, 0.08);
       }
 
@@ -353,7 +353,7 @@
       .eligibility li {
         position: relative;
         border-radius: 18px;
-        background: white;
+        background: rgba(255, 255, 255, 0.82);
         border: 1px solid var(--line);
         padding: 18px 18px 18px 48px;
       }
@@ -374,7 +374,10 @@
       }
 
       .application {
-        background: white;
+        position: relative;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.58);
+        backdrop-filter: blur(4px);
       }
 
       .application-intro {
@@ -386,6 +389,7 @@
       .confirmation,
       .sync-panel,
       .admin-panel {
+        backdrop-filter: blur(8px);
         padding: clamp(22px, 4vw, 34px);
       }
 
@@ -426,7 +430,7 @@
         color: var(--ink);
         font: inherit;
         font-weight: 500;
-        background: white;
+        background: rgba(255, 255, 255, 0.82);
         outline: none;
       }
 
@@ -485,14 +489,14 @@
 
       .confirmation .button.secondary {
         border-color: var(--line);
-        background: white;
+        background: rgba(255, 255, 255, 0.82);
         color: var(--navy);
       }
 
       .sync-panel,
       .admin-panel {
         margin-top: 24px;
-        background: #fbfdff;
+        background: rgba(251, 253, 255, 0.84);
       }
 
       .sync-panel ol {
@@ -514,7 +518,7 @@
         overflow-x: auto;
         border: 1px solid var(--line);
         border-radius: 18px;
-        background: white;
+        background: rgba(255, 255, 255, 0.82);
       }
 
       table {
@@ -532,7 +536,7 @@
       }
 
       th {
-        background: #edf4fb;
+        background: rgba(237, 244, 251, 0.78);
         color: var(--navy);
       }
 
@@ -550,7 +554,7 @@
       .admin-actions .button.secondary,
       .admin-actions button.secondary {
         border: 1px solid var(--line);
-        background: white;
+        background: rgba(255, 255, 255, 0.82);
         color: var(--navy);
       }
 
@@ -574,9 +578,18 @@
 
       @media (max-width: 920px) {
         .site-header {
-          align-items: flex-start;
-          flex-direction: column;
-        }
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+        padding: 16px clamp(18px, 4vw, 56px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+        background: rgba(255, 255, 255, 0.76);
+        backdrop-filter: blur(12px);
+      }
 
         .site-nav {
           flex-wrap: wrap;
@@ -615,8 +628,16 @@
         }
 
         .hero {
-          min-height: 600px;
-        }
+        position: relative;
+        overflow: hidden;
+        min-height: 660px;
+        display: grid;
+        align-items: center;
+        background:
+          linear-gradient(120deg, rgba(9, 35, 74, 0.76), rgba(15, 94, 168, 0.22)),
+          url("assets/stem-rise-hero.png") center center / cover no-repeat;
+        color: white;
+      }
 
         .form-actions,
         .site-footer {
@@ -647,8 +668,8 @@
         font-family: Arial, Helvetica, sans-serif;
         color: var(--ink);
         background:
-          linear-gradient(rgba(246, 249, 252, 0.88), rgba(246, 249, 252, 0.88)),
-          url("assets/stem-rise-hero.png") center top / cover fixed no-repeat;
+          linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.42)),
+          url("assets/stem-rise-hero.png") center center / cover fixed no-repeat;
         line-height: 1.6;
       }
 
