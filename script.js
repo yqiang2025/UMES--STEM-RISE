@@ -1,6 +1,6 @@
 // Paste your deployed Google Apps Script Web App URL here.
       // Example: const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzjZ7UJR9VYW0XjjCcKfPSnwNBy4Wmx4x8KYGIu2wE/dev";
-      const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz2zxWIckga58ZBlMcMdQkElhB8ujLBUZ1xDImpa_N4cCBvliseDhWA53uvNh1oOseV3g/dev";
+      const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzydZxBzBvazoXYRdJx5sygECKOhZ3bljIJYVtBsYgYbWWV-CdgrPo_i_fpsRBUk2-r4Q/dev";
 
       const coordinatorEmail = "yqiang@umes.edu";
       const form = document.getElementById("registrationForm");
