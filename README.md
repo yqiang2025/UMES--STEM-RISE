@@ -1,47 +1,63 @@
 # STEM-RISE Student Application Website
 
-This repository contains a static student application website for **STEM-RISE: Summer Training, Exploration, and Mentored Research Internship for Student Excellence**.
+This is a static GitHub-ready website for the STEM-RISE summer internship application.
 
-The site is designed for GitHub Pages and includes a student-facing application form that can send each submission to Google Sheets through a Google Apps Script Web App endpoint.
+## Included Features
 
-## Files
+- Student-facing STEM-RISE landing page
+- Online application form
+- Pharmacy included in STEM area of interest
+- Google Sheets submission through Google Apps Script
+- Hidden admin/local record sections so students only see the application page
+- UMES logo and lab background images
+- Download/print copy option for applicants
+- Email record option for the program coordinator
 
-- `index.html` — main website page
-- `styles.css` — website styling
-- `script.js` — form validation, submission handling, Google Sheets sync, email record, and printable copy
-- `appscript/Code.gs` — Google Apps Script backend for appending submissions to Google Sheets
-- `.gitignore` — common files to ignore
-
-## Google Sheets setup
-
-1. Create a Google Sheet named **STEM-RISE Applications**.
-2. Create a tab named **Applications**.
-3. Add this header row:
+## Project Structure
 
 ```text
-ID, Submitted At, First Name, Last Name, Email, Phone, Student ID, Department, Major, Academic Year, GPA, Graduation Term, STEM Area, Mentor, Research Interest, Goals, Housing Needed, Meal Plan Needed
+stem-rise-final-github/
+├── index.html
+├── styles.css
+├── script.js
+├── README.md
+├── .gitignore
+├── assets/
+│   ├── stem-rise-hero.png
+│   └── umes-logo.png
+└── appscript/
+    └── Code.gs
 ```
 
-4. In Google Sheets, open **Extensions → Apps Script**.
-5. Paste the contents of `appscript/Code.gs`.
-6. Click **Deploy → New deployment**.
-7. Select **Web app**.
-8. Set **Execute as** to **Me**.
-9. Set **Who has access** to the appropriate setting for your use case. For a public application form, use **Anyone**.
-10. Copy the Web App URL ending in `/exec`.
-11. In `script.js`, replace the value of `GOOGLE_SHEETS_WEB_APP_URL` with your Web App URL.
+## Google Sheets Setup
 
-This project already includes the Apps Script Web App URL you provided in `script.js`.
+1. Create a Google Sheet.
+2. Add a tab named `Applications`.
+3. Open **Extensions > Apps Script**.
+4. Paste the contents of `appscript/Code.gs`.
+5. Save.
+6. Run `testAppendRow` once to approve permissions and confirm the sheet receives rows.
+7. Go to **Deploy > Manage deployments > Edit**.
+8. Choose **New version**.
+9. Use:
+   - **Execute as:** Me
+   - **Who has access:** Anyone, or Anyone within UMES if all applicants are signed into UMES
+10. Deploy and copy the Web App URL ending in `/exec`.
+11. Paste the URL into `GOOGLE_SHEETS_WEB_APP_URL` in `script.js`.
 
-## GitHub Pages deployment
+The current `script.js` already contains the UMES Apps Script URL provided during setup.
 
-1. Create a new GitHub repository, for example `stem-rise-application`.
-2. Upload all files in this folder to the repository.
-3. Go to **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and root folder `/`.
-6. Save. GitHub will publish the website and provide a public URL.
+## GitHub Pages Deployment
 
-## Privacy note
+1. Upload these files to a GitHub repository.
+2. Go to **Settings > Pages**.
+3. Under **Build and deployment**, choose:
+   - Source: Deploy from a branch
+   - Branch: main
+   - Folder: /root
+4. Save.
+5. GitHub will publish the site and provide a public URL.
 
-Student application forms can contain sensitive student information. Confirm that your collection method and storage location meet UMES and program requirements before using the site publicly.
+## Important
+
+If you change `Code.gs`, saving is not enough. You must deploy a **new version** of the Apps Script Web App.
