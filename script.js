@@ -1,6 +1,6 @@
 // Paste your deployed Google Apps Script Web App URL here.
-      // Example: const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycb.../exec";
-      const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/a/macros/umes.edu/s/AKfycbwF4RyXqkHTeH5JX4LDjJ6Pzwx2eFn0x-GK8fIsWCY2aoS-cRjKHwhzwidWRCVFTy2l/exec";
+      // Example: const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/a/macros/umes.edu/s/AKfycbxC0koJ8djUPcliZP0bmJ6LiBbskvSRyEOii-XKD_WfQ4S7lrod8iPFj2301X5fi9hg/exec";
+      const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/a/macros/umes.edu/s/AKfycbxC0koJ8djUPcliZP0bmJ6LiBbskvSRyEOii-XKD_WfQ4S7lrod8iPFj2301X5fi9hg/exec";
 
       const coordinatorEmail = "yqiang@umes.edu";
       const form = document.getElementById("registrationForm");
