@@ -134,8 +134,9 @@
           <h2>Submit your STEM-RISE interest form</h2>
           <p>
             Complete the fields below to prepare your registration. When
-            submitted, your browser will create a confirmation and let you save
-            a copy of the application details.
+            submitted, your browser will create a confirmation, prepare an email
+            record for the program coordinator, and let you save a PDF copy of
+            the application details.
           </p>
         </div>
 
@@ -165,7 +166,18 @@
               </label>
               <label>
                 Department
-                <input name="department" required />
+                <select name="department" required>
+                  <option value="">Select one</option>
+                  <option>Biological Sciences</option>
+                  <option>Chemistry</option>
+                  <option>Computer Science</option>
+                  <option>Engineering</option>
+                  <option>Mathematics</option>
+                  <option>Natural Sciences</option>
+                  <option>Pharmacy</option>
+                  <option>Technology</option>
+                  <option>Other</option>
+                </select>
               </label>
               <label>
                 Major
@@ -248,8 +260,11 @@
           <h2>Registration prepared</h2>
           <p id="confirmationText"></p>
           <div class="confirmation-actions">
+            <a class="button primary" id="emailApplication" href="mailto:yqiang@umes.edu">
+              Email Record
+            </a>
             <button class="button primary" id="downloadApplication" type="button">
-              Download Copy
+              Download PDF Copy
             </button>
             <button class="button secondary" id="newApplication" type="button">
               New Registration
