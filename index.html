@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>STEM-RISE Summer Internship Registration</title>
     <meta name="description" content="STEM-RISE student application website for UMES undergraduate STEM research internship applicants." />
-    <link rel="preload" href="assets/umes-logo.png" as="image" />
-    <link rel="preload" href="assets/stem-rise-hero.png" as="image" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -23,14 +21,11 @@
         <a href="#eligibility">Eligibility</a>
         <a href="#register">Register</a>
       </nav>
-      <a class="header-logo" href="https://www.umes.edu/" aria-label="University of Maryland Eastern Shore">
-        <img src="assets/umes-logo.png" alt="University of Maryland Eastern Shore" />
-      </a>
+      <a class="fallback-logo" href="https://www.umes.edu/" aria-label="University of Maryland Eastern Shore">UMES</a>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/stem-rise-hero.png" alt="Students collaborating in a STEM research lab" />
         <div class="hero-content">
           <p class="eyebrow">Applications open for UMES undergraduates</p>
           <h1 id="hero-title">STEM-RISE Summer Internship Registration</h1>
@@ -286,9 +281,10 @@
           <p class="eyebrow">Confirmation</p>
           <h2>Application submitted</h2>
           <p id="confirmationText"></p>
+          <p class="completion-note">After submitting, send a quick completion notice to the STEM-RISE coordinator using the email button below.</p>
           <p id="syncStatus" class="visually-hidden" aria-hidden="true"></p>
           <div class="confirmation-actions">
-            <a class="button primary" id="emailApplication" href="https://outlook.office.com/mail/deeplink/compose?to=yqiang@umes.edu" target="_blank" rel="noopener">Email Record</a>
+            <a class="button primary" id="emailApplication" href="https://outlook.office.com/mail/deeplink/compose?to=vhsia%40umes.edu&cc=yqiang%40umes.edu" target="_blank" rel="noopener">Email Completion Notice</a>
             <button class="primary" id="downloadApplication" type="button">Download / Print Copy</button>
             <button class="secondary" id="newApplication" type="button">New Application</button>
           </div>

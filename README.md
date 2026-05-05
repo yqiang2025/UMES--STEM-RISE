@@ -61,3 +61,15 @@ The current `script.js` already contains the UMES Apps Script URL provided durin
 ## Important
 
 If you change `Code.gs`, saving is not enough. You must deploy a **new version** of the Apps Script Web App.
+
+
+## Outlook Email Completion Notice
+
+This GitHub/custom-form version includes an **Email Completion Notice** button after the student submits the website form.
+
+The button opens Outlook on the web with:
+- Coordinator email pre-filled as vhsia@umes.edu
+- Subject pre-filled
+- Student application details included in the email body
+
+- CC yqiang@umes.edu

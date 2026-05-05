@@ -1,8 +1,9 @@
 // Paste your deployed Google Apps Script Web App URL here.
       // Example: const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzjZ7UJR9VYW0XjjCcKfPSnwNBy4Wmx4x8KYGIu2wE/dev";
-      const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxQHKkgj9KBaeqQbLa5M4j0KCaN7IYh9YwIjFywMDzdLqlGxddBrrUK9BpxVX1JceyV/dev";
+      const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzjZ7UJR9VYW0XjjCcKfPSnwNBy4Wmx4x8KYGIu2wE/dev";
 
-      const coordinatorEmail = "yqiang@umes.edu";
+      const coordinatorEmail = "vhsia@umes.edu";
+      const coordinatorCcEmail = "yqiang@umes.edu";
       const form = document.getElementById("registrationForm");
       const formStatus = document.getElementById("formStatus");
       const confirmation = document.getElementById("confirmation");
@@ -104,11 +105,24 @@
       }
 
       function updateEmailLink(app) {
-        const subject = encodeURIComponent("STEM-RISE Application: " + app.firstName + " " + app.lastName);
-        const body = encodeURIComponent(applicationText(app));
+        const subject = encodeURIComponent("STEM-RISE Application Completed: " + app.firstName + " " + app.lastName);
+        const body = encodeURIComponent(
+          "Hello Dr. Qiang,
+
+" +
+          "I completed my STEM-RISE application.
+
+" +
+          applicationText(app) +
+          "
+
+Thank you."
+        );
+
         const outlookUrl =
           "https://outlook.office.com/mail/deeplink/compose" +
           "?to=" + encodeURIComponent(coordinatorEmail) +
+          "&cc=" + encodeURIComponent(coordinatorCcEmail) +
           "&subject=" + subject +
           "&body=" + body;
 
@@ -203,6 +217,8 @@
         syncStatus.textContent = message;
         form.reset();
       });
+
+
       emailApplication.addEventListener("click", function(event) {
         if (!latestApplication) {
           return;
@@ -210,16 +226,24 @@
 
         event.preventDefault();
 
-        const subject = encodeURIComponent("STEM-RISE Application: " + latestApplication.firstName + " " + latestApplication.lastName);
-        const body = encodeURIComponent(applicationText(latestApplication));
+        const subject = encodeURIComponent("STEM-RISE Application Completed: " + latestApplication.firstName + " " + latestApplication.lastName);
+        const body = encodeURIComponent(
+          "Hello Dr. Qiang,\n\n" +
+          "I completed my STEM-RISE application.\n\n" +
+          applicationText(latestApplication) +
+          "\n\nThank you."
+        );
+
         const outlookUrl =
           "https://outlook.office.com/mail/deeplink/compose" +
           "?to=" + encodeURIComponent(coordinatorEmail) +
+          "&cc=" + encodeURIComponent(coordinatorCcEmail) +
           "&subject=" + subject +
           "&body=" + body;
 
         window.open(outlookUrl, "_blank", "noopener");
       });
+
 
       downloadApplication.addEventListener("click", function() {
         if (!latestApplication) return;
