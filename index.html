@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STEM-RISE Summer Internship Registration</title>
+    <meta name="description" content="STEM-RISE student application website for UMES undergraduate STEM research internship applicants." />
+    <link rel="preload" href="assets/umes-logo.png" as="image" />
+    <link rel="preload" href="assets/stem-rise-hero.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="STEM-RISE home">
+        <span class="brand-mark">SR</span>
+        <span>
+          <strong>STEM-RISE</strong>
+          <small>UMES Summer Research Internship</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#eligibility">Eligibility</a>
+        <a href="#register">Register</a>
+      </nav>
+      <a class="header-logo" href="https://www.umes.edu/" aria-label="University of Maryland Eastern Shore">
+        <img src="assets/umes-logo.png" alt="University of Maryland Eastern Shore" />
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/stem-rise-hero.png" alt="Students collaborating in a STEM research lab" />
+        <div class="hero-content">
+          <p class="eyebrow">Applications open for UMES undergraduates</p>
+          <h1 id="hero-title">STEM-RISE Summer Internship Registration</h1>
+          <p>
+            A 10-week paid summer research experience with mentorship, housing, meals,
+            graduate preparation, and a final research presentation.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#register">Start Registration</a>
+            <a class="button secondary" href="#overview">View Program Details</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-facts" aria-label="Program highlights">
+        <div>
+          <strong>10 weeks</strong>
+          <span>Paid summer research</span>
+        </div>
+        <div>
+          <strong>Housing + meals</strong>
+          <span>Covered for selected participants</span>
+        </div>
+        <div>
+          <strong>Mentored research</strong>
+          <span>Faculty or professional mentor</span>
+        </div>
+        <div>
+          <strong>Certificate</strong>
+          <span>Issued after completion</span>
+        </div>
+      </section>
+
+      <section class="section split" id="overview">
+        <div>
+          <p class="eyebrow">Program Overview</p>
+          <h2>Build research experience for graduate, medical, or professional school.</h2>
+        </div>
+        <div class="copy-stack">
+          <p>
+            STEM-RISE gives UMES undergraduate students hands-on research experience in
+            STEM-related fields. Students work with an approved mentor, participate in
+            career-development activities, and strengthen their preparation for competitive
+            graduate school applications.
+          </p>
+          <p>
+            Students may identify a research mentor whose work aligns with their academic
+            and career goals. Mentors may include faculty members, researchers, or
+            professionals, subject to program approval.
+          </p>
+        </div>
+      </section>
+
+      <section class="section program-grid" aria-labelledby="program-title">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="program-title">What participants receive</h2>
+        </div>
+        <article>
+          <span class="icon" aria-hidden="true">01</span>
+          <h3>Research Placement</h3>
+          <p>Conduct STEM research with routine mentor meetings and project milestones.</p>
+        </article>
+        <article>
+          <span class="icon" aria-hidden="true">02</span>
+          <h3>Career Preparation</h3>
+          <p>Join graduate, medical, and professional school readiness sessions.</p>
+        </article>
+        <article>
+          <span class="icon" aria-hidden="true">03</span>
+          <h3>Communication Training</h3>
+          <p>Develop your research story and present final summer outcomes.</p>
+        </article>
+        <article>
+          <span class="icon" aria-hidden="true">04</span>
+          <h3>Community</h3>
+          <p>Network with faculty, researchers, professionals, and STEM peers.</p>
+        </article>
+      </section>
+
+      <section class="section eligibility" id="eligibility">
+        <div>
+          <p class="eyebrow">Eligibility</p>
+          <h2>Who should apply</h2>
+        </div>
+        <ul>
+          <li>Current UMES undergraduate student in a STEM-related discipline.</li>
+          <li>Interest in research and STEM-related career pathways.</li>
+          <li>Strong academic potential and commitment to continued study.</li>
+          <li>Interest in graduate, medical, or professional school preparation.</li>
+        </ul>
+      </section>
+
+      <section class="section application" id="register">
+        <div class="application-intro">
+          <p class="eyebrow">Register</p>
+          <h2>Submit your STEM-RISE application</h2>
+          <p>
+            Complete the fields below to submit your STEM-RISE application. Selected information
+            will be reviewed by the program coordinator.
+          </p>
+        </div>
+
+        <form class="registration-form" id="registrationForm" novalidate>
+          <fieldset>
+            <legend>Student Information</legend>
+            <div class="field-grid">
+              <label>
+                Student first name *
+                <input name="firstName" autocomplete="given-name" required />
+              </label>
+              <label>
+                Student last name *
+                <input name="lastName" autocomplete="family-name" required />
+              </label>
+              <label>
+                UMES email *
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>
+                Phone *
+                <input name="phone" type="tel" autocomplete="tel" required />
+              </label>
+              <label>
+                UMES student ID *
+                <input name="studentId" inputmode="numeric" required />
+              </label>
+              <label>
+                Department *
+                <select name="department" required>
+                  <option value="">Select one</option>
+                  <option>Biological Sciences</option>
+                  <option>Chemistry</option>
+                  <option>Computer Science</option>
+                  <option>Engineering</option>
+                  <option>Mathematics</option>
+                  <option>Natural Sciences</option>
+                  <option>Pharmacy</option>
+                  <option>Technology</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>
+                Major *
+                <input name="major" required />
+              </label>
+              <label>
+                Academic year *
+                <select name="year" required>
+                  <option value="">Select one</option>
+                  <option>First-year</option>
+                  <option>Sophomore</option>
+                  <option>Junior</option>
+                  <option>Senior</option>
+                </select>
+              </label>
+              <label>
+                Current GPA *
+                <input name="gpa" type="number" min="0" max="4" step="0.01" required />
+              </label>
+              <label>
+                Expected graduation term
+                <input name="graduationTerm" placeholder="Example: Spring 2027" />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Research Interests</legend>
+            <div class="field-grid">
+              <label>
+                STEM area of interest *
+                <select name="stemArea" required>
+                  <option value="">Select one</option>
+                  <option>Biological Sciences</option>
+                  <option>Chemistry</option>
+                  <option>Computer Science</option>
+                  <option>Engineering</option>
+                  <option>Environmental Science</option>
+                  <option>Mathematics or Data Science</option>
+                  <option>Physics</option>
+                  <option>Pharmacy</option>
+                  <option>Pre-medical or Health Sciences</option>
+                  <option>Other STEM field</option>
+                </select>
+              </label>
+              <label>
+                Preferred research mentor, if known
+                <input name="mentor" placeholder="Faculty, researcher, or professional name" />
+              </label>
+            </div>
+            <label>
+              Briefly describe your research interests *
+              <textarea name="researchInterest" rows="5" required></textarea>
+            </label>
+            <label>
+              Career or graduate school goals *
+              <textarea name="goals" rows="5" required></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Support Needs</legend>
+            <div class="field-grid">
+              <label>
+                Do you need summer housing? *
+                <select name="housingNeeded" required>
+                  <option value="">Select one</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </label>
+              <label>
+                Do you need a meal plan? *
+                <select name="mealPlanNeeded" required>
+                  <option value="">Select one</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Program Readiness</legend>
+            <div class="check-group" role="group" aria-label="Program acknowledgements">
+              <label>
+                <input name="available" type="checkbox" required />
+                I expect to be available for the full 10-week summer research experience.
+              </label>
+              <label>
+                <input name="mentorMeetings" type="checkbox" required />
+                I understand participants meet routinely with an approved mentor.
+              </label>
+              <label>
+                <input name="presentation" type="checkbox" required />
+                I understand the program concludes with a final research presentation.
+              </label>
+              <label class="consent-label">
+                <input name="consent" type="checkbox" required />
+                I certify that the information provided is accurate and may be used for STEM-RISE application review.
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            <button class="primary" type="submit">Submit Application</button>
+          </div>
+        </form>
+
+        <aside class="confirmation" id="confirmation" hidden>
+          <p class="eyebrow">Confirmation</p>
+          <h2>Application submitted</h2>
+          <p id="confirmationText"></p>
+          <p id="syncStatus" class="visually-hidden" aria-hidden="true"></p>
+          <div class="confirmation-actions">
+            <a class="button primary" id="emailApplication" href="mailto:yqiang@umes.edu">Email Record</a>
+            <button class="primary" id="downloadApplication" type="button">Download / Print Copy</button>
+            <button class="secondary" id="newApplication" type="button">New Application</button>
+          </div>
+        </aside>
+
+        <section class="admin-panel" aria-labelledby="admin-title">
+          <h2 id="admin-title">Application Records</h2>
+          <p>
+            This table shows applications submitted during this browser session. Google Sheets is the recommended permanent record.
+          </p>
+          <div class="admin-actions">
+            <button class="secondary" id="exportCsv" type="button">Export CSV</button>
+            <button class="secondary" id="clearRecords" type="button">Clear Local Records</button>
+          </div>
+          <div class="admin-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Major</th>
+                  <th>STEM Area</th>
+                  <th>Submitted</th>
+                </tr>
+              </thead>
+              <tbody id="recordsBody">
+                <tr><td colspan="5">No local applications yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="sync-panel" id="sync" aria-labelledby="sync-title">
+          <p class="eyebrow">Google Sheets Sync</p>
+          <h2 id="sync-title">Connect this form to Google Sheets</h2>
+          <p>
+            Replace the placeholder URL in the script at the bottom of this file with your deployed Google Apps Script Web App URL.
+          </p>
+          <ol>
+            <li>Create a Google Sheet named <strong>STEM-RISE Applications</strong>.</li>
+            <li>Create a tab named <strong>Applications</strong>.</li>
+            <li>Add this header row: ID, Submitted At, First Name, Last Name, Email, Phone, Student ID, Department, Major, Academic Year, GPA, Graduation Term, STEM Area, Mentor, Research Interest, Goals, Housing Needed, Meal Plan Needed.</li>
+            <li>Open <strong>Extensions → Apps Script</strong>.</li>
+            <li>Paste the script below, then deploy as a Web App.</li>
+            <li>Set access to <strong>Anyone with the link</strong> or the appropriate UMES account setting.</li>
+            <li>Copy the Web App URL into <code>GOOGLE_SHEETS_WEB_APP_URL</code>.</li>
+          </ol>
+          <pre class="code-box"><code>function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Applications");
+  var data = JSON.parse(e.postData.contents);
+
+  sheet.appendRow([
+    data.id,
+    data.submittedAt,
+    data.firstName,
+    data.lastName,
+    data.email,
+    data.phone,
+    data.studentId,
+    data.department,
+    data.major,
+    data.year,
+    data.gpa,
+    data.graduationTerm,
+    data.stemArea,
+    data.mentor,
+    data.researchInterest,
+    data.goals,
+    data.housingNeeded,
+    data.mealPlanNeeded
+  ]);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: "success" }))
+    .setMimeType(ContentService.MimeType.JSON);
+}</code></pre>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>STEM-RISE: Summer Training, Exploration, and Mentored Research Internship for Student Excellence</p>
+      <a href="#top">Back to top</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
