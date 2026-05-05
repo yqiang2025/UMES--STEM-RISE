@@ -3,7 +3,6 @@
       const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzjZ7UJR9VYW0XjjCcKfPSnwNBy4Wmx4x8KYGIu2wE/dev";
 
       const coordinatorEmail = "vhsia@umes.edu";
-      const coordinatorCcEmail = "yqiang@umes.edu";
       const form = document.getElementById("registrationForm");
       const formStatus = document.getElementById("formStatus");
       const confirmation = document.getElementById("confirmation");
@@ -86,7 +85,6 @@
 
         return "https://outlook.office.com/mail/deeplink/compose" +
           "?to=" + encodeURIComponent(coordinatorEmail) +
-          "&cc=" + encodeURIComponent(coordinatorCcEmail) +
           "&subject=" + subject +
           "&body=" + body;
       }

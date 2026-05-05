@@ -72,11 +72,10 @@ The button opens Outlook on the web with:
 - Subject pre-filled
 - Student application details included in the email body
 
-- CC yqiang@umes.edu
 
 
 ## Submit Button Email Behavior
 
 In this version, the main **Submit Application and Open Email** button opens Outlook directly after the student submits the website form.
 
-There is no separate Email Record button. The Outlook message is addressed to `vhsia@umes.edu` and copies `yqiang@umes.edu`.
+There is no separate Email Record button. The Outlook message is addressed only to `vhsia@umes.edu`.
