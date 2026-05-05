@@ -1,6 +1,6 @@
 // Paste your deployed Google Apps Script Web App URL here.
       // Example: const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycb.../exec";
-      const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx56I6_-ntrZFKXIh9zh48zp6dF5ofZRw5Lzqf7hsUGPQQA2GpWLFKXFFPTE-tRr-An/exec";
+      const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/a/macros/umes.edu/s/AKfycbwF4RyXqkHTeH5JX4LDjJ6Pzwx2eFn0x-GK8fIsWCY2aoS-cRjKHwhzwidWRCVFTy2l/exec";
 
       const coordinatorEmail = "yqiang@umes.edu";
       const form = document.getElementById("registrationForm");
@@ -81,7 +81,7 @@
       }
 
       async function syncToGoogleSheets(app) {
-        const configured = GOOGLE_SHEETS_WEB_APP_URL && !GOOGLE_SHEETS_WEB_APP_URL.includes("PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE");
+        const configured = GOOGLE_SHEETS_WEB_APP_URL && !GOOGLE_SHEETS_WEB_APP_URL.includes("https://script.google.com/a/macros/umes.edu/s/AKfycbwF4RyXqkHTeH5JX4LDjJ6Pzwx2eFn0x-GK8fIsWCY2aoS-cRjKHwhzwidWRCVFTy2l/exec");
 
         if (!configured) {
           return "Google Sheets sync is not configured yet. The application was saved locally in this browser.";

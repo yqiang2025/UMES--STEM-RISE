@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>STEM-RISE Summer Internship Registration</title>
     <meta name="description" content="STEM-RISE student application website for UMES undergraduate STEM research internship applicants." />
-    <link rel="preload" href="assets/umes-logo.png" as="image" />
-    <link rel="preload" href="assets/stem-rise-hero.png" as="image" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -23,14 +21,11 @@
         <a href="#eligibility">Eligibility</a>
         <a href="#register">Register</a>
       </nav>
-      <a class="header-logo" href="https://www.umes.edu/" aria-label="University of Maryland Eastern Shore">
-        <img src="assets/umes-logo.png" alt="University of Maryland Eastern Shore" />
-      </a>
+      <a class="fallback-logo" href="https://www.umes.edu/" aria-label="University of Maryland Eastern Shore">UMES</a>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/stem-rise-hero.png" alt="Students collaborating in a STEM lab" />
         <div class="hero-content">
           <p class="eyebrow">Applications open for UMES undergraduates</p>
           <h1 id="hero-title">STEM-RISE Summer Internship Registration</h1>
@@ -212,6 +207,7 @@
                   <option>Environmental Science</option>
                   <option>Mathematics or Data Science</option>
                   <option>Physics</option>
+                  <option>Pharmacy</option>
                   <option>Pre-medical or Health Sciences</option>
                   <option>Other STEM field</option>
                 </select>
